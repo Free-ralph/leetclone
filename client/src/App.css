@@ -1,0 +1,31 @@
+
+form input{
+    @apply rounded-sm border border-gray-400 py-2 px-3 w-full font-light bg-[#e8f0fe]  ;
+}
+
+form input:hover{
+    @apply placeholder:text-gray-800 border-gray-800 delay-75 transition-all ;
+}
+
+.button-type-1 {
+    @apply bg-gray-600 text-white px-4 py-2 h-[2.8rem] hover:bg-gray-500 delay-75 transition-all !important;
+}
+
+.dark {
+    @apply bg-dark-layer-2 text-zinc-50;
+ }
+
+
+ /* ::-webkit-scrollbar{
+    width: 12px;
+    height: 12px;
+  
+  }
+  ::-webkit-scrollbar-track{
+    padding:10px ;
+    
+  }
+  ::-webkit-scrollbar-thumb{
+    @apply bg-gray-300 dark:bg-dark-fill-3 ;
+    padding:10px ;
+  } */

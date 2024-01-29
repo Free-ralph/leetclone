@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Encode Sans', sans-serif;
+}
+
+@layer components {
+    .tooltip{
+      @apply absolute z-10 text-center scale-0 group-hover:scale-100 transition-all delay-0 rounded-lg border border-gray-500 bg-light-300 dark:bg-dark-problem-page-alternate ;
+    }
+
+    .btn-1{
+        @apply items-center rounded  bg-gray-200 dark:bg-dark-alternate hover:bg-gray-300 dark:hover:bg-dark-fill-2 cursor-pointer ;
+    }
+    .btn-2{
+        @apply border border-black rounded bg-orange-500 hover:bg-light-primary-200 text-white dark:border-orange-600 transition-all delay-75 ;
+    }
+    .btn-3{
+        @apply rounded-lg bg-light-300 hover:bg-neutral-400 dark:bg-dark-problem-page-alternate dark:hover:bg-dark-fill-2 cursor-pointer transition-all delay-75;
+    }
+    .custom-scrollbar{
+      @apply scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-300 dark:scrollbar-thumb-dark-fill-2 dark:scrollbar-track-dark-problem-page-alternate ;
+    }
+  }

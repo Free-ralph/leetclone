@@ -1,0 +1,1 @@
+{"version":3,"file":"populateDB.js","sourceRoot":"","sources":["../../src/routes/populateDB.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,mBAAmB,EAAE,MAAM,6BAA6B,CAAC;AAClE,OAAO,EAAE,MAAM,EAAE,MAAM,SAAS,CAAC;AAEjC,MAAM,MAAM,GAAG,MAAM,EAAE,CAAC;AAExB,MAAM,CAAC,GAAG,CAAC,GAAG,EAAE,mBAAmB,CAAC,CAAC;AAErC,eAAe,MAAM,CAAC"}
