@@ -12,7 +12,6 @@ import AuthRoutes from "./routes/auth.js";
 import QuestionRoute from "./routes/questions.js";
 import ProblemRouter from "./routes/problem.js";
 import PopulateDBRoutes from "./routes/populateDB.js";
-import corsOptions from "./config/corsOptions.js";
 import credentials from "./middleware/credentials.js";
 dotenv.config();
 const app = express();
@@ -21,7 +20,7 @@ const PORT = process.env.PORT || 3500;
 // and fetch cookies credentials requirement
 app.use(credentials);
 // Cross Origin Resource Sharing
-app.use(cors(corsOptions));
+app.use(cors());
 // middleware
 app.use(morgan('dev'));
 app.use(express.json());
