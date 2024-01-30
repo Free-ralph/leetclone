@@ -87,7 +87,12 @@ const ProblemDetail = () => {
         </>
       ) : (
         <div className="w-full h-full flex justify-center items-center text-center flex-col">
-          <span>Hello Code Sensie </span> {/* some anime picture should come in here */} <br />
+          <span>Hello Code Sensie </span>
+          <img
+            src="/images/gojo.jpg"
+            className="w-[80%] my-3"
+            alt="gojo-image"
+          />
           Please Switch to a desktop for the best coding experience
         </div>
       )}
