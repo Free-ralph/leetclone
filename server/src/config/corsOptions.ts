@@ -3,7 +3,7 @@ import allowedOrigins from "./allowedOrigins.js";
 const corsOptions = {
   origin: (origin: any, callback: any) => {
     // for prod, where going to check if there's an origin, so vices like postman "without origin won't access" so !origin 
-    if (allowedOrigins.indexOf(origin) !== -1 || (!origin && !process.env.PROD)) {
+    if (allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
