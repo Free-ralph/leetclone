@@ -23,10 +23,10 @@ const PORT = process.env.PORT || 3500;
 
 // Handle options credentials check - before CORS!
 // and fetch cookies credentials requirement
-app.use(credentials);
+// app.use(credentials);
 
 // Cross Origin Resource Sharing
-app.use(cors({origin : "https://leetclone-roan.vercel.app", credentials : true}));
+app.use(cors({origin : "https://leetclone-roan.vercel.app", methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', credentials : true}));
 
 // middleware
 app.use(morgan('dev'));

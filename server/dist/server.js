@@ -12,15 +12,14 @@ import AuthRoutes from "./routes/auth.js";
 import QuestionRoute from "./routes/questions.js";
 import ProblemRouter from "./routes/problem.js";
 import PopulateDBRoutes from "./routes/populateDB.js";
-import credentials from "./middleware/credentials.js";
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3500;
 // Handle options credentials check - before CORS!
 // and fetch cookies credentials requirement
-app.use(credentials);
+// app.use(credentials);
 // Cross Origin Resource Sharing
-app.use(cors({ origin: "https://leetclone-roan.vercel.app", credentials: true }));
+app.use(cors({ origin: "https://leetclone-roan.vercel.app", methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', credentials: true }));
 // middleware
 app.use(morgan('dev'));
 app.use(express.json());
