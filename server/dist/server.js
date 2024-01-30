@@ -12,12 +12,13 @@ import AuthRoutes from "./routes/auth.js";
 import QuestionRoute from "./routes/questions.js";
 import ProblemRouter from "./routes/problem.js";
 import corsOptions from "./config/corsOptions.js";
+import credentials from "./middleware/credentials.js";
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3500;
 // Handle options credentials check - before CORS!
 // and fetch cookies credentials requirement
-// app.use(credentials);
+app.use(credentials);
 // Cross Origin Resource Sharing
 app.use(cors(corsOptions));
 // middleware

@@ -1,5 +1,5 @@
 // if (process.env.PROD) {
-const allowedOrigins = ["https://leetclone-roan.vercel.app", "https://leetclone-roan.vercel.app/", "leetclone-roan.vercel.app"];
+const allowedOrigins = ["https://leetclone-roan.vercel.app"];
 // } else {
 //   allowedOrigins = [
 //     "http://127.0.0.1:5500",
