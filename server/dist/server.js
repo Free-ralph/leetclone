@@ -25,7 +25,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.get("/", (req, res) => {
-    return res.send("Hollo");
+    return res.json("Hollo");
 });
 // routes
 app.use("/api/v1/auth", AuthRoutes);
