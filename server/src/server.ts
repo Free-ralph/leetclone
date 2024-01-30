@@ -26,7 +26,7 @@ const PORT = process.env.PORT || 3500;
 app.use(credentials);
 
 // Cross Origin Resource Sharing
-app.use(cors());
+app.use(cors(corsOptions));
 
 // middleware
 app.use(morgan('dev'));

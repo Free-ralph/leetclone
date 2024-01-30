@@ -1,7 +1,7 @@
 let allowedOrigins : string[];
 
 if (process.env.PROD) {
-  allowedOrigins = ["https://leetclone-roan.vercel.app/"];
+  allowedOrigins = ["https://leetclone-roan.vercel.app"];
 } else {
   allowedOrigins = [
     "http://127.0.0.1:5500",
