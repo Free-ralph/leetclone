@@ -33,8 +33,10 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
 
+app.get("/", (req, res) => {
+  return res.send("Hollo")
+})
 // routes
-app.use("/api/v1/populate", PopulateDBRoutes);
 app.use("/api/v1/auth", AuthRoutes);
 app.use("/api/v1/problem", ProblemRouter);
 
