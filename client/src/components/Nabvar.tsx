@@ -21,7 +21,7 @@ type NavbarProps = {
   handleSubmit?(): void;
 };
 
-const Nabvar = ({ problemPage, handleSubmit   }: NavbarProps) => {
+const Nabvar = ({ problemPage, handleSubmit }: NavbarProps) => {
   const auth = useRecoilValue(authModelState);
   const { id } = useParams();
   const [curProblemIdx, setcurProblemIdx] = useState(() => {
@@ -60,6 +60,24 @@ const Nabvar = ({ problemPage, handleSubmit   }: NavbarProps) => {
         );
         newIdx = Object.keys(problems).length;
       }
+      setcurProblemIdx(newIdx);
+      navigate(`/problem/${newProblem}`);
+    }
+  };
+
+  const handleRandomProblem = () => {
+    if (curProblemIdx) {
+      let newIdx = Math.floor(Math.random() * Object.keys(problems).length) + 1;
+      if(newIdx === curProblemIdx){
+        if(newIdx - 1 === 0){
+          newIdx ++
+        }else{
+          newIdx --
+        }
+      }
+      let newProblem = Object.keys(problems).find(
+        (key) => problems[key].order == newIdx
+      );
       setcurProblemIdx(newIdx);
       navigate(`/problem/${newProblem}`);
     }
@@ -104,7 +122,10 @@ const Nabvar = ({ problemPage, handleSubmit   }: NavbarProps) => {
               >
                 <ChevronRightIcon fontSize="large" />
               </span>
-              <span className="cursor-pointer hover:bg-gray-300 dark:hover:bg-dark-fill-2  p-1transition-all delay-75 text-gray-400">
+              <span
+                onClick={handleRandomProblem}
+                className="cursor-pointer hover:bg-gray-300 dark:hover:bg-dark-fill-2  p-1transition-all delay-75 text-gray-400"
+              >
                 <ShuffleIcon />
               </span>
             </div>
@@ -117,7 +138,10 @@ const Nabvar = ({ problemPage, handleSubmit   }: NavbarProps) => {
               <PlayArrowIcon className="mr-1" />
               Run
             </div>
-            <div onClick={handleSubmit} className=" btn-1 text-green-600 dark:text-green-300 px-3 flex justify-center font-semibold">
+            <div
+              onClick={handleSubmit}
+              className=" btn-1 text-green-600 dark:text-green-300 px-3 flex justify-center font-semibold"
+            >
               <BackupIcon className="mr-1" />
               Submit
             </div>

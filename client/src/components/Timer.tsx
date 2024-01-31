@@ -14,7 +14,7 @@ const ShowTimerVariant: Variants = {
     },
   },
   visible: {
-    width: "10rem",
+    width: "11rem",
     transition: {
       type: "spring",
       stiffness: 200,
@@ -97,9 +97,9 @@ const Timer = () => {
               </div>
               <div
                 onClick={handleTogglePause}
-                className="px-1 flex-1 btn-1 flex group relative"
+                className=" flex-1 btn-1 flex justify-center relative"
               >
-                <p>
+                <p className="flex ">
                   <span className="mr-2">
                     {isPaused ? (
                       <PlayCircleOutlineIcon />
